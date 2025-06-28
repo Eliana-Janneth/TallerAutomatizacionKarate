@@ -20,4 +20,5 @@ Scenario: Autenticarse y obtener token
   # Guardamos el token para usarlo en otros escenarios o archivos
   * def authToken = response.token
   * print 'Token obtenido:', authToken
+  * return { authToken: authToken }
 
