@@ -1,4 +1,4 @@
-package org.udea.parabank;
+package org.udea.taller;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
@@ -18,7 +18,7 @@ class TestRunnerParallel {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:org/udea/parabank/features")
+        Results results = Runner.path("classpath:org/udea/taller/features")
                 .tags("~@ignore")
                 .outputCucumberJson(true)
                 .parallel(5);
@@ -33,7 +33,7 @@ class TestRunnerParallel {
         Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[]{"json"}, true);
         List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("target"), "Parabank REST API");
+        Configuration config = new Configuration(new File("target"), "Taller REST API");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
