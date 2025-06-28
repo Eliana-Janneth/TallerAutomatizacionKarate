@@ -2,7 +2,7 @@ Feature: Crear contacto usando token
 
 Background:
   * url 'https://thinking-tester-contact-list.herokuapp.com'
-  * def authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViNTc0ZjlhMTY1ODAwMTUwY2IxNzkiLCJpYXQiOjE3NTEwNzI0MzZ9.ok0zWcDGXV2dNGcqQgVWKCA1OEDYACZjCgcxJiWo-_I"
+  * def authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViNTc0ZjlhMTY1ODAwMTUwY2IxNzkiLCJpYXQiOjE3NTEwNzU4ODl9.-ShuDfOErdqF_w-BpHbG4n8dwZIEsLNKgoSyI5ne_WU"
 
 Scenario: Crear contacto autenticado
   Given path 'contacts'
