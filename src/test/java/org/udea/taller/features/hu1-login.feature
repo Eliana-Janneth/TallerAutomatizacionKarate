@@ -17,8 +17,4 @@ Scenario: Autenticarse y obtener token
   Then status 200
   And match response contains { token: '#notnull' }
 
-  # Guardamos el token para usarlo en otros escenarios o archivos
-  * def authToken = response.token
-  * print 'Token obtenido:', authToken
-  * return { authToken: authToken }
 

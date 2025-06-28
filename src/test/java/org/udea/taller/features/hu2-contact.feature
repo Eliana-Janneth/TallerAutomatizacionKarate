@@ -2,8 +2,7 @@ Feature: Crear contacto usando token
 
 Background:
   * url 'https://thinking-tester-contact-list.herokuapp.com'
-  * def result = call read('classpath:org/udea/taller/features/hu1-login.feature')
-  * def authToken = result.authToken
+  * def authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViNTc0ZjlhMTY1ODAwMTUwY2IxNzkiLCJpYXQiOjE3NTEwNzI0MzZ9.ok0zWcDGXV2dNGcqQgVWKCA1OEDYACZjCgcxJiWo-_I"
 
 Scenario: Crear contacto autenticado
   Given path 'contacts'
